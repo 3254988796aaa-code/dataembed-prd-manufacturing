@@ -76,7 +76,7 @@ def run_fe_reg(data, dep, x, controls, entity="code6", time="year"):
 def load_data():
     panel_path = local_input("panel.csv", required=False)
     if not panel_path.is_file():
-        st.info("请先在本地配置 panel.csv。经济数据不随公开仓库发布，配置方法见 docs/本地运行.md。")
+        st.info("未找到 panel.csv。仓库已附输入数据，请检查数据目录配置，方法见 docs/本地运行.md。")
         st.stop()
     df = pd.read_csv(panel_path, dtype=str)
 

@@ -360,13 +360,13 @@ def main():
     parser = argparse.ArgumentParser(description="企业年报文本分析；所有生成结果仅保存在本地")
     parser.add_argument("--pdf_dir", type=Path, default=ANNUAL_REPORT_DIR)
     parser.add_argument("--output_dir", type=Path, default=OUTPUT_DIR / "年报处理结果")
-    parser.add_argument("--alias_file", type=Path, default=INPUT_DIR / "alias_map.csv")
+    parser.add_argument("--alias_file", type=Path, default=INPUT_DIR / "annual_report_alias_map.csv")
     parser.add_argument("--max_pages", type=int, default=None)
     args = parser.parse_args()
     pdf_dir, out_dir = args.pdf_dir.resolve(), args.output_dir.resolve()
     alias_file, max_pages = str(args.alias_file.resolve()), args.max_pages
     if not args.alias_file.is_file():
-        parser.error("请在本地提供 alias_map.csv；配置方法见 docs/本地运行.md")
+        parser.error("请提供年报别名映射 annual_report_alias_map.csv；配置方法见 docs/本地运行.md")
     if max_pages is not None and max_pages < 1:
         parser.error("--max_pages 必须为正整数")
 

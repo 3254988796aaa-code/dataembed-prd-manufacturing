@@ -2,7 +2,7 @@
 """
 运行方式：
     python 代码/run_all.py
-    python scripts/run_final_pipeline.py --input_dir private_data --output_dir local_outputs
+    python scripts/run_final_pipeline.py --input_dir 输入数据 --output_dir local_outputs
 
 说明：
 1. 本脚本不写死绝对路径，可在任意解压目录运行。
@@ -785,7 +785,7 @@ def main() -> None:
     output_dir = Path(args.output_dir).resolve()
     for filename in ("panel.csv", "alias_map.csv"):
         if not (input_dir / filename).is_file():
-            parser.error(f"缺少本地输入 {filename}；经济数据不随仓库发布，请参阅 docs/本地运行.md")
+            parser.error(f"缺少本地输入 {filename}；请检查输入目录，参阅 docs/本地运行.md")
     fig_dir = output_dir / "figures"
     output_dir.mkdir(parents=True, exist_ok=True)
     fig_dir.mkdir(parents=True, exist_ok=True)

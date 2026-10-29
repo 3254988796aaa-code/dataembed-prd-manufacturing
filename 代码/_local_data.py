@@ -1,18 +1,18 @@
-"""本地数据路径与配置；公开仓库不包含经济数据或估计结果。"""
+"""本地数据路径与配置；默认使用仓库随附数据。"""
 import math
 import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-INPUT_DIR = Path(os.environ.get("DATAEMBED_INPUT_DIR", str(ROOT / "private_data"))).expanduser().resolve()
+INPUT_DIR = Path(os.environ.get("DATAEMBED_INPUT_DIR", str(ROOT / "输入数据"))).expanduser().resolve()
 OUTPUT_DIR = Path(os.environ.get("DATAEMBED_OUTPUT_DIR", str(ROOT / "local_outputs"))).expanduser().resolve()
-ANNUAL_REPORT_DIR = Path(os.environ.get("DATAEMBED_ANNUAL_REPORT_DIR", str(ROOT / "data" / "annual_reports"))).expanduser().resolve()
+ANNUAL_REPORT_DIR = Path(os.environ.get("DATAEMBED_ANNUAL_REPORT_DIR", str(ROOT / "原始数据" / "公司年报PDF"))).expanduser().resolve()
 
 
 def local_input(name, required=True):
     target = INPUT_DIR / name
     if required and not target.is_file():
-        raise FileNotFoundError(f"缺少本地输入 {name}。数据不随仓库发布，请参阅 docs/本地运行.md。")
+        raise FileNotFoundError(f"缺少本地输入 {name}。请检查输入数据目录，参阅 docs/本地运行.md。")
     return target
 
 

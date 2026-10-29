@@ -1,0 +1,12 @@
+将以下数据导入对应的程序，即可运行：
+          ——输入文件——                                             |                       ——要运行的程序——
+副本已处理_股票代码.xlsx                                            |                             make_alias.py
+panel.csv                                                                   |                              run_all.py、整合生成最终面板数据.py、整合面板数据（Polars 全兼容版）.py、app.py、strategy_backtest.py
+alias_map.csv                                                           |                              run_all.py
+计算TFP所需的原始财务数据面板.xlsx                      |                              TFP计算.py
+公司年报PDF（文件夹在原始数据里）                     |                               年报处理.py、年报文本处理（Numba JIT 加速版）.py
+TFP_2017-2024.xlsx                                                 |                               整合生成最终面板数据.py、整合面板数据（Polars 全兼容版）.py
+上市公司财务数据_最终表02.xlsx                             |                               整合生成最终面板数据.py、整合面板数据（Polars 全兼容版）.py
+计算TFP所需的原始财务数据面板.xlsx                     |                               整合生成最终面板数据.py、整合面板数据（Polars 全兼容版）.py
+datembed_panel.csv                                              |                              整合生成最终面板数据.py、整合面板数据（Polars 全兼容版）.py
+城市宏观数据.xlsx                                                    |                               整合生成最终面板数据.py、整合面板数据（Polars 全兼容版）.py

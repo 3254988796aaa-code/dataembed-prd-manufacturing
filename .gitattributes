@@ -2,7 +2,19 @@
 *.py text eol=lf
 *.md text eol=lf
 *.csv text eol=lf
-.githooks/pre-commit text eol=lf
 *.txt text eol=lf
+.githooks/* text eol=lf
 .gitignore text eol=lf
 .gitattributes text eol=lf
+原始代码/** -text
+原始数据/** -text
+输入数据/** -text
+运行结果/** -text
+组员说明.txt -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.xlsx filter=lfs diff=lfs merge=lfs -text
+*.xls filter=lfs diff=lfs merge=lfs -text
+*.doc filter=lfs diff=lfs merge=lfs -text
+*.docx filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text

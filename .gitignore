@@ -1,12 +1,20 @@
-# 默认忽略所有文件，只允许公开代码、文档与年报元信息。
+# 项目数据、结果和原始代码均纳入版本控制；临时产物继续忽略。
 /*
 !/.gitignore
 !/.gitattributes
 !/README.md
 !/requirements.txt
+!/项目文件校验.csv
+!/组员说明.txt
+!/*.doc
+!/*.docx
 !/代码/
 /代码/*
 !/代码/*.py
+!/原始代码/
+!/原始数据/
+!/输入数据/
+!/运行结果/
 !/docs/
 /docs/*
 !/docs/*.md
@@ -16,13 +24,16 @@
 !/.githooks/
 /.githooks/*
 !/.githooks/pre-commit
+!/.githooks/pre-push
+!/.githooks/post-checkout
+!/.githooks/post-commit
+!/.githooks/post-merge
 !/data/
 /data/*
 !/data/annual_reports/
 /data/annual_reports/*
 !/data/annual_reports/README.md
 !/data/annual_reports/annual_report_index.csv
-# 任何路径都不跟踪密钥、缓存或本地配置。
 .env
 .env.*
 *.pem
