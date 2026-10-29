@@ -1,0 +1,31 @@
+# 默认忽略所有文件，只允许公开代码、文档与年报元信息。
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/requirements.txt
+!/代码/
+/代码/*
+!/代码/*.py
+!/docs/
+/docs/*
+!/docs/*.md
+!/tools/
+/tools/*
+!/tools/check_public_files.py
+!/.githooks/
+/.githooks/*
+!/.githooks/pre-commit
+!/data/
+/data/*
+!/data/annual_reports/
+/data/annual_reports/*
+!/data/annual_reports/README.md
+!/data/annual_reports/annual_report_index.csv
+# 任何路径都不跟踪密钥、缓存或本地配置。
+.env
+.env.*
+*.pem
+*.key
+__pycache__/
+*.pyc

@@ -1,0 +1,11 @@
+numpy
+pandas
+scipy
+statsmodels
+matplotlib
+plotly
+streamlit
+openpyxl
+PyMuPDF
+numba
+polars
